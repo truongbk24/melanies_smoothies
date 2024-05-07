@@ -36,7 +36,7 @@ if ingredients_list:
         if not search_on:
             search_on = "test"
             st.write('The search value for ', fruit_chosen,' is ', pd_df.loc[pd_df['FRUIT_NAME'] == fruit_chosen, 'FRUIT_NAME'].iloc[0], '.')
-        else
+        else:
             st.write('The search value for ', fruit_chosen,' is ', search_on, '.')
         st.subheader(fruit_chosen+ ' Nutrition Information')
         fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+search_on)
